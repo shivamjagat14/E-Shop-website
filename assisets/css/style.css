@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* nav bar */
+.navbar{
+    position: absolute;
+}
+#navbarNav .nav-link{
+    margin: 15px;
+    text-align: center;
+    color:black;
+}
+#navbarNav .nav-link:hover,
+#navbarNav .nav-link:hover{
+    color:red;
+}
+#navbarNav .nav-link:active{
+    color:red;
+}
+ .navbar-toggler-icon{
+    width: unset;
+    height: unset;
+}
+button:focus{
+   box-shadow: unset;
+}   
+
+/* Home css */
+.home-banner-1,
+.home-banner-2{
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+height: 650px;
+position: relative;
+}
+.home-banner-1{
+    background-image:url('../images/slide1.jpg');
+}
+.home-banner-2{
+    background-image:url('../images/slide2.jpg')
+}
+.home-banner .home-text{
+    position: absolute;
+    top: 35%;
+    left: 20%;
+}
+.home-banner h1{
+    font-size:4rem;
+    font-weight: 600px;
+}
+
+.home-banner p{
+    font-size:xx-large
+}
+.home .carousel-indicators [data-bs-target]{
+    background-color: red;
+    width: 2.3rem;
+    height: 0.213rem;
+}
+.home .hbutton{
+    background: red;
+    color:white;
+}
+.home .hbutton:hover{
+    background: transparent;
+    color:red;
+    font-weight: lighter;
+    border: solid red;
+}
+.home .carousel-control-next-icon,
+.home .carousel-control-prev-icon{
+    background: transparent;
+}
+.home .slider-icon{
+    font-size: 3rem;
+    font-weight: 600;
+    color: red;
+}
+
+/* offer section  */
+.offer-section{
+    padding-top:7rem;
+}
+.offer-section .offer-box .offer-image::before{
+    position: absolute;
+    content: '';
+    left:-300%;
+    z-index: 2;
+    display: block; 
+    width: 100%;
+    height: 100%;
+    background:-webkit-linear-gradient(to right ,rgba(255, 255, 255, 0)0%,rgba(255, 255, 255, 0.3)100%);
+    background:linear-gradient(to right ,rgba(255, 255, 255, 0)0%,rgba(255, 255, 255, 0.3)100%);
+    transform:skewX(-50deg);
+}
+.offer-section .offer-box .offer-image img{
+    transform: scale(1.02);
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.offer-section .offer-box:hover .offer-image::before{  
+    animation-name: effect_shine;
+    animation-duration: 1s;
+}
+@keyframes effect_shine{
+    100%{
+        left:100%;
+    }
+}
+
+.offer-section .ovelay::before{
+    content: '';
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background: #0000003b;
+    z-index: 1; 
+}
+.offer-section .offer-box .offer-info{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.offer-section .offer-info .header{
+    font-size: 3.5rem;
+    color: white;
+}
+.offer-section .offer-info .offer-title{
+    color: white;
+    margin: 5PX;
+}
+.offer-section .offer-info .btn-outline-danger{
+    border-color: white;
+    color: white;
+}
+.offer-section .offer-info .btn-outline-danger:hover{
+    border-color: red;
+    background: red;
+    transition: 2ms;
+}
+
+
+/* product css */
+
+.product-section{
+    padding-top: 5rem;
+}
+
+.product-section .product h2::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 31%;
+    border-radius: 50px ;
+    height: 3px;
+    width: 100px;
+    background: red;
+}
+.product-section a{
+    text-decoration: none;
+    color: black;
+}
+.product-section .product-image img{
+    transition: all 500ms ease-in-out;
+}
+.product-section .product-image .product-image-seconde{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.product-section .product-image:hover img{
+    opacity: 1;
+}
+.product-list .product-image .sale-title{
+    background: red;
+    color:white;
+    border-radius:4px;
+    padding: 1px 10px;
+    z-index: 99;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.product-list .product-name h3{
+    font-size: 1.2rem;
+}
+.product-list .product-name h3:hover{
+    color: red;
+}
+.product-list .product-name .amount{
+    color:red;
+}
+.product-list .product-name del{
+    color:gray;
+}
+.product-list .add-to-card{
+    border: none;
+    background: transparent;
+}
+.product-list .add-to-card:hover{
+    color:red;
+}
+.product-list .rating .active{
+    color:red;
+}
+
+/* up to 75 offer */
+.product-section .up-to-offer .up-to{
+    position: relative;
+}
+.product-section .up-to-offer .up-to::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #0000001f;  
+}
+ .product-section .up-to-offer .up-to img{
+    transition: 1s;
+ }
+ .product-section .up-to-offer .up-to:hover img{
+    transform: scale(1.1);
+ }
+.up-to-offer .up-to-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    z-index: 3 ;
+    transform: translate(-50% , -50%);
+}
+
+/* special css */
+.special-section .special h2::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 31%;
+    border-radius: 50px ;
+    height: 3px;
+    width: 100px;
+    background: red;
+}
+
+.special-section .countdown-conatainer {
+    margin-left: 107px;
+}
+.special-section .countdown-conatainer .btn:hover{
+    background: transparent;
+    border-color: red;
+    color:red;
+}
+.countdown-conatainer .countdown li{
+    text-align: center;
+    margin: 10px;
+    padding: 10px 25px;
+    background: rgba(128, 128, 128, 0.155);
+}
+.special-img .sale{
+    position: absolute;
+    background: red;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+/* contact css */
+.contact-section{
+    background: rgba(128, 128, 128, 0.050);
+}
+.contact-section .info{
+   
+}
+.contact-section .info .list-unstyled a{
+    text-decoration: none;
+    color: black;
+}
+.contact-section .form-fild .send-btn{
+    border-color: red;
+    background: red;
+    color: white;
+}
+.contact-section .form-fild .send-btn:hover{
+    background: transparent;
+    color:red;
+}
+.contact-section .form-fild .text-area{
+    height: 100px;
+}
+
+/* cart-section  */
+
+/* FOOTER SECTION */
+.footer{
+    background: red;
+    color: white;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}

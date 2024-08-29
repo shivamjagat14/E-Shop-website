@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background: rgba(255, 255, 255, 0);
+}
+
+.main .product-daital{
+    display: inline-flex;
+    border: solid black;
+    border-width: 1px;
+    margin: 0 15%;
+    width: 70%;
+    justify-content: center;
+}
+.cart-section .cart h2::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-radius: 50px ;
+    height: 3px;
+    width: 78px;
+    background: red;
+}
+
+.main-section  .button .btn{
+    background: red;
+    color: white;
+}
+
+.main-section .button .btn:hover{
+    background: transparent;
+    color:red;
+    border-color: red;
+}
+
+
+/* .main .product-daital .product-name{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.main .product-daital{
+    display: inline-flex;
+    border: solid red;
+    margin: 0 10%;
+    width: 80%;
+} */
