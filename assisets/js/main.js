@@ -4,7 +4,7 @@ let daysitem=document.getElementById("days");
 let hoursitem=document.getElementById("hr");
 let mintusitem=document.getElementById("min");
 let secondesitem=document.getElementById("sec");
-
+let special = document.getElementById("special-section");
 let countdown = ()=>{
     let futuredate = new Date("1 Sep 2024");
     let currentdate=new Date();
@@ -19,8 +19,22 @@ let countdown = ()=>{
     hoursitem.innerHTML=hours;
     mintusitem.innerHTML=mintus;
     secondesitem.innerHTML=secondes;
+     if(futuredate===currentdate){
+            special.remove();
+        }
 }
 
 countdown();
 setInterval(countdown,1000);
+
+
+// navbar scroll
+let navbar = document.querySelectorAll('.nav-link');
+let navCollapse = document.querySelector('.navbar-collapse.collapse');
+
+navbar.forEach(function (a) {
+    a.addEventListener('click', function () {
+        navCollapse.classList.remove('show');
+    })
+})
 
