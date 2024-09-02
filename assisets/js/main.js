@@ -5,21 +5,23 @@ let hoursitem=document.getElementById("hr");
 let mintusitem=document.getElementById("min");
 let secondesitem=document.getElementById("sec");
 let special = document.getElementById("special-section");
-let countdown = ()=>{
+
+let countdown = () => {
     let futuredate = new Date("10 Sep 2024");
-    let currentdate=new Date();
+    let currentdate = new Date();
 
-    let countdate=futuredate-currentdate;
+    let countdate = futuredate - currentdate;
 
-    let days= Math.floor(countdate/1000/60/60/24);
-    let hours= Math.floor(countdate/1000/60/60)%24;
-    let mintus= Math.floor(countdate/1000/60)%60;
-    let secondes= Math.floor(countdate/1000)%60;
-    daysitem.innerHTML=days;
-    hoursitem.innerHTML=hours;
-    mintusitem.innerHTML=mintus;
-    secondesitem.innerHTML=secondes;
-     if(futuredate===currentdate){
+    let days = Math.floor(countdate / 1000 / 60 / 60 / 24);
+    let hours = Math.floor(countdate / 1000 / 60 / 60) % 24;
+    let mintus = Math.floor(countdate / 1000 / 60) % 60;
+    let secondes = Math.floor(countdate / 1000) % 60;
+    daysitem.innerHTML = days;
+    hoursitem.innerHTML = hours;
+    mintusitem.innerHTML = mintus;
+    secondesitem.innerHTML = secondes;
+
+    if(futuredate===currentdate){
             special.remove();
         }
 }
