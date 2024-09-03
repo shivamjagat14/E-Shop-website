@@ -7,7 +7,7 @@ let secondesitem=document.getElementById("sec");
 let special = document.getElementById("special-section");
 
 let countdown = () => {
-    let futuredate = new Date("10 Sep 2024");
+    let futuredate = new Date("20 Sep 2024");
     let currentdate = new Date();
 
     let countdate = futuredate - currentdate;
